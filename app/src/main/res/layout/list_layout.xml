@@ -1,0 +1,49 @@
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="80dp">
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp" card_view:layout_constraintTop_toTopOf="parent"
+
+            card_view:layout_constraintStart_toStartOf="parent" card_view:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" card_view:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp"
+                android:id="@+id/imageView2" android:layout_weight="1"
+                android:layout_marginLeft="350dp"
+                android:layout_marginTop="32dp"
+        />
+
+        <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+                android:id="@+id/lista_seccion"
+                android:baselineAligned="false"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:background="@drawable/button_ripple_sign_up">
+
+
+            <TextView
+                    android:layout_marginTop="24dp"
+                    android:id="@+id/Display_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_weight="1"
+                    android:text="Title"
+                    android:textColor="#080808"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+            />
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "142905458898",
+    "firebase_url": "https://museorealidadaumentada.firebaseio.com",
+    "project_id": "museorealidadaumentada",
+    "storage_bucket": "museorealidadaumentada.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142905458898:android:188e2427514a7753",
+        "android_client_info": {
+          "package_name": "com.example.desarrollador.museo_ar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142905458898-2bbpkd495d4fdfl19hii78relbq95a06.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.desarrollador.museo_ar",
+            "certificate_hash": "0a5cfe48e0e57c7cb514a9a22fcf5359fc7e3225"
+          }
+        },
+        {
+          "client_id": "142905458898-v435f561p9elt3n4bjhknotgeq27he1f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.desarrollador.museo_ar",
+            "certificate_hash": "f491f9b308907e6237ba19892b9de6f74c92d9c3"
+          }
+        },
+        {
+          "client_id": "142905458898-2fc2j109fbvdnufgubbm13mr8os4vn28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYB4UmMjHQE-Cb1eA3FykE0iNUkLIme20"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142905458898-2fc2j109fbvdnufgubbm13mr8os4vn28.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

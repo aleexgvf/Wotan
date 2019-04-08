@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:layout="@layout/activity_pintura_info"
+              android:orientation="vertical"
+             tools:context=".Fragments.RatesFragment">
+
+    <Button
+            android:layout_marginTop="16dp"
+            android:id="@+id/favRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top"
+            android:text="Dejar comentario"
+            android:textColor="@color/colorTextWhite"
+            android:background="@drawable/button_ripple_sign_up"
+            android:layout_margin="0dp"/>
+    <!--android:src="@drawable/ic_rates_fav"/>-->
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"/>
+
+
+
+</LinearLayout>

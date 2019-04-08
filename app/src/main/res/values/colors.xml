@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#f4cb42</color>
+    <color name="colorAccentDark">#222222</color>
+    <color name="colorPrimaryText">#222222</color>
+    <color name="colorSecondaryText">#000000</color>
+    <color name="colorTextBlack">#000000</color>
+    <color name="colorTextWhite">#FFFFFF</color>
+    <color name="colorRecyclerBg">#CCCCCC</color>
+    <color name="colorWotan1">#4286f4</color>
+    <color name="colorWotan2">#E60000</color>
+    <color name="colorWotan3">#f4cb42</color>
+    <color name="colorIcon">#00574B</color>
+    <color name="colorDivider">#888888</color>
+    <color name="colorGooglePlus">#DD4B39</color>
+    <color name="colorGooglePlusDark">#B92D21</color>
+    <color name="colorFacebook">#8b9dc3</color>
+    <color name="colorFacebookDark">#3b5998</color>
+    <color name="colorBackGroundWhite">#DDDDDD</color>
+</resources>
