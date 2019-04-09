@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :WotanFT-debug:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/WotanFT-debug.aar/f3c479c6c59aef92bf71b59fa1e7ca48/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/WotanFT-debug.aar/f3c479c6c59aef92bf71b59fa1e7ca48/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/WotanFT-debug.aar/f3c479c6c59aef92bf71b59fa1e7ca48/jars/libs/unity-classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
