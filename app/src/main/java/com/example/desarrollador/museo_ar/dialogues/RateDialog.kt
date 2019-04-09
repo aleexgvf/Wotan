@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseAuth
 import java.util.*
 import com.example.desarrollador.museo_ar.utils.RxBus
 import com.google.firebase.auth.FirebaseUser
+import kotlinx.android.synthetic.main.dialog_rate.*
+
 
 
 class RateDialog : DialogFragment()
@@ -31,11 +33,9 @@ class RateDialog : DialogFragment()
             .setPositiveButton(getString(R.string.dialog_ok)){ _, _ ->
                 activity!!.toast("Pressed Ok")
                 val textRate = view.findViewById<EditText>(R.id.editTextRateFeedback).text.toString()
-                Log.w("RateAdapter","Textrate: $textRate")
                 if(textRate.isNotEmpty()){
                     val imgURL = currentUser.photoUrl?.toString() ?: run {""}
-                    val rate = Rate(currentUser.uid,textRate, view.ratingBarFeedback.rating,Date(),imgURL)
-                    Log.w("Dialog",view.ratingBarFeedback.rating.toString())
+                    val rate = Rate(currentUser.uid,textRate, view.ratingBarFeedbackDialog!!.rating,Date(),imgURL)
                     RxBus.publish(NewRateEvent(rate))
                 }
              }
