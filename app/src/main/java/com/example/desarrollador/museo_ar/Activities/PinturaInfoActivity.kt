@@ -3,6 +3,7 @@ package com.example.desarrollador.museo_ar.Activities
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.FloatingActionButton
 import android.support.v7.widget.Toolbar
 import android.text.Html
 import android.util.Log
@@ -15,9 +16,13 @@ import com.example.desarrollador.museo_ar.Models.Pinturas
 import com.example.desarrollador.museo_ar.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.iesoluciones.WotanAR.UnityPlayerActivity
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_pintura_info.*
+import kotlinx.android.synthetic.main.activity_pintura_info.floatingActionButton
 import kotlinx.android.synthetic.main.activity_pintura_info.view.*
+import kotlinx.android.synthetic.main.activity_seccion_list.*
 
 class PinturaInfoActivity : AppCompatActivity() {
 
@@ -28,12 +33,14 @@ class PinturaInfoActivity : AppCompatActivity() {
     private lateinit var textViewNombre: TextView
     private lateinit var textViewDesc: TextView
     private lateinit var ratingBar: RatingBar
-    private lateinit var toolvarView: Toolbar
+    private lateinit var toolvarView: android.widget.Toolbar
     private var  pinturasSubscription: ValueEventListener? = null
+    private lateinit var floatingActionButton: FloatingActionButton
+    private lateinit var imageViewFlechaAtras: ImageView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        toolvarView= findViewById(R.layout)
+
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pintura_info)
@@ -46,7 +53,21 @@ class PinturaInfoActivity : AppCompatActivity() {
         ratingBar = findViewById(R.id.ratingBar)
         textViewDesc = findViewById(R.id.textViewDesc)
         toolvarView = findViewById(R.id.toolbarView)
+        imageViewFlechaAtras = findViewById(R.id.imageViewFlechaAtrasPinturas)
+        floatingActionButton =findViewById(R.id.floatingActionButton)
         firebaseData()
+
+        floatingActionButton.setOnClickListener {
+            val intent = Intent(this, UnityPlayerActivity::class.java)
+            startActivity(intent)
+        }
+
+        imageViewFlechaAtras.setOnClickListener {
+            val intent = Intent(this, SeccionList::class.java)
+            intent.putExtra("pathSecciones",pathSecciones)
+            startActivity(intent)
+            finish()
+        }
     }
 
        private fun firebaseData(){

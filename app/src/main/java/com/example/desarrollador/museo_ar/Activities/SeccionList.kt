@@ -2,6 +2,7 @@ package com.example.desarrollador.museo_ar.Activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -15,29 +16,40 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_seccion_list.*
+import com.iesoluciones.WotanAR.UnityPlayerActivity
+
 
 class SeccionList : AppCompatActivity() {
 
     private lateinit var mrecylerview : RecyclerView
     private lateinit var ref: DatabaseReference
     private lateinit var show_progress: ProgressBar
-    private lateinit var pathString: String
+    private lateinit var pathSecciones: String
+    private lateinit var floatingActionButton: FloatingActionButton
+    private lateinit var imageViewFlechaAtras: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seccion_list)
-        pathString= intent.getStringExtra("pathString")
-        ref = FirebaseDatabase.getInstance().reference.child("Seccion").child(pathString).child("Pinturas")
+
+        pathSecciones= intent.getStringExtra("pathSecciones")
+        ref = FirebaseDatabase.getInstance().reference.child("Seccion").child(pathSecciones).child("Pinturas")
         mrecylerview = findViewById(R.id.reyclerview)
         mrecylerview.layoutManager = LinearLayoutManager(this)
         show_progress = findViewById(R.id.progress_bar)
+        imageViewFlechaAtras = findViewById(R.id.imageViewFlechaAtrasSecciones)
+        floatingActionButton = findViewById(R.id.floatingActionButton)
         firebaseData()
 
         imageViewFlechaAtras.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
+        }
+
+        floatingActionButton.setOnClickListener {
+            val intent = Intent(this, UnityPlayerActivity::class.java)
+            startActivity(intent)
         }
     }
    private fun firebaseData() {
@@ -67,7 +79,7 @@ class SeccionList : AppCompatActivity() {
                         holder.txt_name.text = model.Name
                         holder.itemView.setOnClickListener{
                             val intent = Intent(holder.itemView.context,PinturaInfoActivity::class.java)
-                            intent.putExtra("pathSecciones",pathString)
+                            intent.putExtra("pathSecciones",pathSecciones)
                             intent.putExtra("pathPinturas",placeid)
                             //Log.w("reference",placeid)
                             holder.itemView.context.startActivity(intent)

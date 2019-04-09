@@ -2,6 +2,7 @@ package com.example.desarrollador.museo_ar.Activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.ContactsContract
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -21,13 +22,17 @@ import com.google.firebase.database.*
 import com.iesoluciones.WotanAR.UnityPlayerActivity
 
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.floatingActionButton
+import kotlinx.android.synthetic.main.activity_seccion_list.*
 
 var ref: DatabaseReference = FirebaseDatabase.getInstance().getReference().child("Seccion")
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var mrecylerview : RecyclerView
-    lateinit var show_progress: ProgressBar
+    private lateinit var mrecylerview : RecyclerView
+    private lateinit var show_progress: ProgressBar
+    private lateinit var imageViewFlechaAtras: ImageView
+    private lateinit var floatingActionButton: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +41,8 @@ class MainActivity : AppCompatActivity() {
         mrecylerview = findViewById(R.id.reyclerview)
         mrecylerview.layoutManager = LinearLayoutManager(this)
         show_progress = findViewById(R.id.progress_bar)
+        imageViewFlechaAtras = findViewById(R.id.imageViewFlechaAtras)
+        floatingActionButton = findViewById(R.id.floatingActionButton)
         firebaseData()
 
 
@@ -60,6 +67,15 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, UnityPlayerActivity::class.java)
             startActivity(intent)
         }
+
+        imageViewFlechaAtras.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            goToActivity<LoginActivity>{
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
+            finish()
+        }
+
     }
 
     fun firebaseData() {
@@ -83,7 +99,7 @@ class MainActivity : AppCompatActivity() {
                         holder.txt_name.setText(model.Name)
                         holder.itemView.setOnClickListener{
                             val intent = Intent(holder.itemView.context,SeccionList::class.java)
-                            intent.putExtra("pathString",placeid)
+                            intent.putExtra("pathSecciones",placeid)
                             holder.itemView.context.startActivity(intent)
                         }
                     }
@@ -95,24 +111,6 @@ class MainActivity : AppCompatActivity() {
         mrecylerview.adapter = firebaseRecyclerAdapter
         firebaseRecyclerAdapter.startListening()
     }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.general_options_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId){
-            R.id.menu_log_out -> {
-                FirebaseAuth.getInstance().signOut()
-                goToActivity<LoginActivity>{
-                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                }
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
     private class MyViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
 
         internal var txt_name: TextView = itemView!!.findViewById<TextView>(R.id.Display_title)

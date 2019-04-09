@@ -17,6 +17,16 @@
             android:titleMarginStart="50dp"/>
 
 
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            app:srcCompat="@drawable/ic_flecha_atras"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/imageViewFlechaAtrasSecciones"
+            android:layout_marginTop="10dp"/>
+
     <android.support.v7.widget.RecyclerView
             android:id="@+id/reyclerview"
             android:layout_height="wrap_content" android:layout_alignParentStart="true"
@@ -36,15 +46,6 @@
             android:layout_marginStart="168dp"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="168dp"/>
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="36dp"
-            app:srcCompat="@drawable/ic_flecha_atras"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="10dp"
-            android:layout_alignParentTop="true"
-            android:id="@+id/imageViewFlechaAtras"
-            android:layout_marginTop="10dp"/>
 
     <android.support.design.widget.FloatingActionButton
             android:layout_width="100dp"
@@ -53,5 +54,6 @@
             android:layout_alignParentEnd="true" android:layout_marginEnd="32dp" android:layout_alignParentBottom="true"
             android:id="@+id/floatingActionButton" android:layout_marginBottom="34dp"
             app:backgroundTintMode="src_over" app:backgroundTint="@color/colorWotan1"/>
+
 
 </RelativeLayout>
