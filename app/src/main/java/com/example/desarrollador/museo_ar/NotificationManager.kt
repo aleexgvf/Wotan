@@ -11,16 +11,13 @@ import android.support.v4.app.NotificationCompat
 import android.util.Log
 import com.estimote.proximity_sdk.api.ProximityObserverBuilder
 import com.estimote.proximity_sdk.api.ProximityZoneBuilder
-import com.example.desarrollador.museo_ar.Activities.MainActivity
 import com.example.desarrollador.museo_ar.Activities.MyApplication
-import com.example.desarrollador.museo_ar.Activities.PinturaInfoActivity
 import com.example.desarrollador.museo_ar.Activities.SeccionList
 
 class NotificationsManager(private val context: Context) {
 
 
     private lateinit var pathSecciones: String
-    //private lateinit var pathPinturas : String
     private val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
     private fun buildNotification(title: String, text: String): Notification {
@@ -31,12 +28,6 @@ class NotificationsManager(private val context: Context) {
             )
         }
 
-        if(title == "Seccion 01"){
-            pathSecciones = "Seccion_01"
-        }
-        if(title == "Seccion 02"){
-            pathSecciones = "Seccion_02"
-        }
             val intent = Intent(context, SeccionList::class.java)
             intent.putExtra("pathSecciones",pathSecciones)
             //intent.putExtra("pathPinturas",pathPinturas)
@@ -78,15 +69,12 @@ class NotificationsManager(private val context: Context) {
 
         if(title == "Seccion 01") {
             pathSecciones = "Seccion_01"
-        }else if(title == "Seccion 02"){
+        }else
+            if(title == "Seccion 02"){
             pathSecciones = "Seccion_02"
         }
-
         val seccion = buildNotification(title, "Esta en la $title")
-
         return seccion
-
-
     }
 
 }
