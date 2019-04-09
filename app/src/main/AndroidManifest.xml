@@ -33,30 +33,30 @@
                 <data android:scheme="@string/fb_login_protocol_scheme"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.MainActivity">
+        <activity android:name=".activities.MainActivity">
         </activity>
         <activity
-                android:name=".Login.LoginActivity"
+                android:name=".login.LoginActivity"
                 android:theme="@style/NoPreview"
                 android:windowSoftInputMode="adjustPan">
         </activity>
         <activity
-                android:name=".Login.ForgotPassword_activity"
+                android:name=".login.ForgotPassword_activity"
                 android:windowSoftInputMode="adjustPan">
         </activity>
         <activity
-                android:name=".Login.SignUpActivity"
+                android:name=".login.SignUpActivity"
                 android:windowSoftInputMode="adjustPan">
         </activity>
         <activity
-                android:name=".Activities.MainEmpyActivity"
+                android:name=".activities.MainEmpyActivity"
                 android:theme="@android:style/Theme.NoDisplay">
         </activity>
-        <activity android:name=".Activities.PinturaInfoActivity">
+        <activity android:name=".activities.PinturaInfoActivity">
         </activity>
-        <activity android:name=".Activities.SeccionList">
+        <activity android:name=".activities.SeccionList">
         </activity>
-        <activity android:name=".Activities.SplashActivity">
+        <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

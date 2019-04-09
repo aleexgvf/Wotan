@@ -5,7 +5,7 @@
              android:layout_height="match_parent"
              tools:layout="@layout/activity_pintura_info"
               android:orientation="vertical"
-             tools:context=".Fragments.RatesFragment">
+             tools:context=".fragments.RatesFragment">
 
     <Button
             android:layout_marginTop="16dp"

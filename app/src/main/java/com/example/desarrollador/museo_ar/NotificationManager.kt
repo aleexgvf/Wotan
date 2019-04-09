@@ -11,9 +11,8 @@ import android.support.v4.app.NotificationCompat
 import android.util.Log
 import com.estimote.proximity_sdk.api.ProximityObserverBuilder
 import com.estimote.proximity_sdk.api.ProximityZoneBuilder
-import com.example.desarrollador.museo_ar.Activities.MainActivity
-import com.example.desarrollador.museo_ar.Activities.MyApplication
-import com.example.desarrollador.museo_ar.Activities.PinturaInfoActivity
+import com.example.desarrollador.museo_ar.activities.MyApplication
+import com.example.desarrollador.museo_ar.activities.PinturaInfoActivity
 
 class NotificationsManager(private val context: Context) {
 
