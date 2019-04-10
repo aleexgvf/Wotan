@@ -8,18 +8,20 @@
     <string name="login_sign_in">Ingresar</string>
     <string name="login_sign_Up">Registrarse</string>
     <string name="login_reset_password">Restaurar Contraseña</string>
-    <string name="login_forgot_password">Olvidaste la contraseña?</string>
+    <string name="login_forgot_password">¿Olvidaste la contraseña?</string>
     <string name="login_create_account">Crear una cuenta</string>
     <string name="login_go_login">Regresar</string>
     <string name="login_sign_in_google">Ingresar con google</string>
     <string name="login_sign_in_facebook">Ingresar con facebook</string>
-    <!--Strings para login, SignUp y ForgotPassword-->
+    <string name="remember_me">Recuerdame</string>
+    <string name="ingresa_con">ò ingresa con:</string>
+    <string name="aceptar">Aceptar</string>
 
     <!--Strings para los rates-->
-    <string name="dialog_title">Rate the app!!</string>
-    <string name="dialog_edit_text_hint">Leave your Feed</string>
-    <string name="dialog_ok">Rate</string>
-    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_title">¡Califica esta obra!</string>
+    <string name="dialog_edit_text_hint">¡Deja tu comentario!</string>
+    <string name="dialog_ok">Calificar</string>
+    <string name="dialog_cancel">Cancelar</string>
 
     <!--String info Fragment-->
     <string name="info_no_name">Nombre no disponible.</string>
@@ -31,7 +33,7 @@
     <string name="facebook_app_id">318227448829090</string>
     <string name="fb_login_protocol_scheme">fb318227448829090</string>
 
-    <!--Sign out-->
+    <!--Strings de Sign out-->
     <string name="options_sign_out">Sign out</string>
     <string name="Lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempor ultricies viverra.
         Suspendisse posuere dictum eros non laoreet. Vivamus consequat est sed vestibulum dictum. Donec sem nisl, mattis
@@ -40,4 +42,10 @@
         molestie ut et lorem. Nunc nec porttitor sapien, ut mollis massa. Etiam accumsan ut ex a ultrices. Proin nec
         dapibus mauris. Aenean sit amet finibus sem. Donec aliquam nunc non enim tincidunt congue.
     </string>
+
+    <!--Strings de Secciones-->
+    <string name="seccion">Secciones</string>
+
+    <!--Strings de pinturas-->
+    <string name="pinturas">Pinturas</string>
 </resources>

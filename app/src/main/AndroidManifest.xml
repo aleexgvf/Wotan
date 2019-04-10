@@ -35,30 +35,38 @@
                 <data android:scheme="@string/fb_login_protocol_scheme"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.MainActivity">
+        <activity
+                android:name=".Activities.MainActivity"
+                android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name=".Login.LoginActivity"
                 android:theme="@style/NoPreview"
-                android:windowSoftInputMode="adjustPan">
+                android:windowSoftInputMode="adjustPan"
+                android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name=".Login.ForgotPassword_activity"
-                android:windowSoftInputMode="adjustPan">
+                android:windowSoftInputMode="adjustPan"
+                android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name=".Login.SignUpActivity"
-                android:windowSoftInputMode="adjustPan">
+                android:windowSoftInputMode="adjustPan"
+                android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name=".Activities.MainEmpyActivity"
                 android:theme="@android:style/Theme.NoDisplay">
         </activity>
-        <activity android:name=".Activities.PinturaInfoActivity">
+        <activity android:name=".Activities.PinturaInfoActivity"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".Activities.SeccionList">
+        <activity android:name=".Activities.SeccionList"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".Activities.SplashActivity">
+        <activity android:name=".Activities.SplashActivity"
+                  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

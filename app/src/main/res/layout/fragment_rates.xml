@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="start|top"
-            android:text="Dejar comentario"
+            android:text="@string/dialog_edit_text_hint"
             android:textColor="@color/colorTextWhite"
             android:background="@drawable/button_ripple_sign_up"
             android:layout_margin="0dp"/>
@@ -25,7 +25,4 @@
             android:layout_height="wrap_content"
             android:clipToPadding="false"
             android:scrollbars="vertical"/>
-
-
-
 </LinearLayout>

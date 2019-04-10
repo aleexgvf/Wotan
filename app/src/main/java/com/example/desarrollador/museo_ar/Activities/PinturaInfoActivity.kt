@@ -81,7 +81,6 @@ class PinturaInfoActivity : AppCompatActivity() {
                     textViewNombre.text = pinturas.Name
                     ratingBar.rating = pinturas.Rating
                     toolvarView.title = pinturas.Name
-
                 }
             })
     }

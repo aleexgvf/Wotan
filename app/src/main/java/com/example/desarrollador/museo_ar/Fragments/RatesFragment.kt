@@ -84,9 +84,9 @@ class RatesFragment : Fragment() {
 
         ratesDBRef.add(newRating)
             .addOnCompleteListener{
-                activity!!.toast("Rating added")
+                activity!!.toast("¡Comentario Añadido! :)")
             }.addOnFailureListener{
-                activity!!.toast("Rating error")
+                activity!!.toast("¡Oh no! Tu Comentario no pudo se añadido :(")
             }
 
     }

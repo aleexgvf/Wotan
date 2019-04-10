@@ -22,7 +22,7 @@ import com.google.firebase.database.*
 import com.iesoluciones.WotanAR.UnityPlayerActivity
 
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.floatingActionButton
+import kotlinx.android.synthetic.main.activity_main.floatingButtonMainAR
 import kotlinx.android.synthetic.main.activity_seccion_list.*
 
 var ref: DatabaseReference = FirebaseDatabase.getInstance().getReference().child("Seccion")
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mrecylerview : RecyclerView
     private lateinit var show_progress: ProgressBar
     private lateinit var imageViewFlechaAtras: ImageView
-    private lateinit var floatingActionButton: ImageView
+    private lateinit var floatingButtonMainAR: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,9 +42,8 @@ class MainActivity : AppCompatActivity() {
         mrecylerview.layoutManager = LinearLayoutManager(this)
         show_progress = findViewById(R.id.progress_bar)
         imageViewFlechaAtras = findViewById(R.id.imageViewFlechaAtras)
-        floatingActionButton = findViewById(R.id.floatingActionButton)
+        floatingButtonMainAR = findViewById(R.id.floatingButtonMainAR)
         firebaseData()
-
 
         val app = application as MyApplication
 
@@ -63,7 +62,7 @@ class MainActivity : AppCompatActivity() {
                     Log.e("app", "requirements error: " + throwable)
                 })
 
-        floatingActionButton.setOnClickListener {
+        floatingButtonMainAR.setOnClickListener {
             val intent = Intent(this, UnityPlayerActivity::class.java)
             startActivity(intent)
         }

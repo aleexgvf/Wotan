@@ -10,8 +10,7 @@
             android:layout_margin="16dp"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-    >
+            android:foreground="?android:attr/selectableItemBackground">
 
         <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
@@ -42,8 +41,8 @@
                         android:layout_height="0.3dp"
                         android:background="@color/colorDivider"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                />
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
                 <ImageView
                         android:layout_width="18dp"
                         android:layout_height="18dp"
@@ -53,16 +52,19 @@
                         android:layout_marginStart="8dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"/>
+
                 <TextView
                         android:text="13 dIC 2018"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/textViewCalendar" app:layout_constraintStart_toEndOf="@+id/imageViewCalendar"
+                        android:id="@+id/textViewCalendar"
+                        app:layout_constraintStart_toEndOf="@+id/imageViewCalendar"
                         android:layout_marginStart="4dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         android:textSize="10sp"
                         android:textColor="@color/colorTextWhite"/>
+
                 <ImageView
                         android:layout_width="14dp"
                         android:layout_height="14dp"
@@ -72,9 +74,9 @@
                         android:layout_marginEnd="8dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"/>
+
                 <TextView
                         android:text="4.5"
-
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/textViewStar"
@@ -82,7 +84,9 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/imageViewStar"
                         android:layout_marginEnd="4dp"
-                        android:textSize="10sp" android:textColor="@color/colorTextWhite"/>
+                        android:textSize="10sp"
+                        android:textColor="@color/colorTextWhite"/>
+
                 <ImageView
                         android:layout_width="28dp"
                         android:layout_height="28dp"
@@ -93,6 +97,7 @@
                         android:layout_marginStart="8dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginEnd="8dp"/>
+
                 <View
                         android:id="@+id/viewSeparator2"
                         android:layout_width="0dp"
@@ -100,7 +105,8 @@
                         android:background="@color/colorDivider"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        android:layout_marginBottom="4dp" app:layout_constraintBottom_toTopOf="@+id/imageViewProfile"/>
+                        android:layout_marginBottom="4dp"
+                        app:layout_constraintBottom_toTopOf="@+id/imageViewProfile"/>
 
             </android.support.constraint.ConstraintLayout>
 

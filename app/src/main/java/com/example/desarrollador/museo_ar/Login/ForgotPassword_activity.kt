@@ -18,6 +18,8 @@ class ForgotPassword_activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgot_password_activity)
 
+
+
         buttonGoLogIn2.setOnClickListener{
             goToActivity<LoginActivity>(){
                 flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK

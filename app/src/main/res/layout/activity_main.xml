@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-
         tools:ignore="ExtraText">
 
     <Toolbar
@@ -12,8 +12,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorWotan1"
-            android:title="Secciones"
-            android:titleTextColor="#FFFFFF"
+            android:title="@string/seccion"
+            android:titleTextColor="@color/colorPrimary"
             android:titleMarginStart="50dp"/>
 
 
@@ -29,8 +29,11 @@
 
     <android.support.v7.widget.RecyclerView
             android:id="@+id/reyclerview"
-            android:layout_height="wrap_content" android:layout_alignParentStart="true"
-            android:layout_marginTop="-4dp" android:layout_marginStart="0dp" android:layout_below="@+id/toolbarView"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="-4dp"
+            android:layout_marginStart="0dp"
+            android:layout_below="@+id/toolbarView"
             android:layout_width="match_parent"/>
 
     <ProgressBar
@@ -50,10 +53,14 @@
     <android.support.design.widget.FloatingActionButton
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:clickable="true" app:srcCompat="@android:drawable/ic_menu_camera"
-            android:layout_alignParentEnd="true" android:layout_marginEnd="32dp" android:layout_alignParentBottom="true"
-            android:id="@+id/floatingActionButton" android:layout_marginBottom="34dp"
-            app:backgroundTintMode="src_over" app:backgroundTint="@color/colorWotan1"/>
-
+            android:clickable="true"
+            app:srcCompat="@drawable/ar2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="32dp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/floatingButtonMainAR"
+            android:layout_marginBottom="34dp"
+            app:backgroundTintMode="src_over"
+            app:backgroundTint="@color/colorWotan1"/>
 
 </RelativeLayout>

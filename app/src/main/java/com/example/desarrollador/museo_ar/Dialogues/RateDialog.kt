@@ -4,7 +4,6 @@ import android.app.Dialog
 import android.os.Bundle
 import android.support.v4.app.DialogFragment
 import android.support.v7.app.AlertDialog
-import android.util.Log
 import android.widget.EditText
 import com.example.desarrollador.museo_ar.Extension.toast
 import com.example.desarrollador.museo_ar.Models.NewRateEvent
@@ -30,18 +29,16 @@ class RateDialog : DialogFragment()
         builder.setView(view)
             .setTitle(getString(R.string.dialog_title))
             .setPositiveButton(getString(R.string.dialog_ok)){ _, _ ->
-                activity!!.toast("Pressed Ok")
+                activity!!.toast("Añadiendio Comentario")
                 val textRate = view.findViewById<EditText>(R.id.editTextRateFeedback).text.toString()
-                Log.w("RateAdapter","Textrate: $textRate")
                 if(textRate.isNotEmpty()){
                     val imgURL = currentUser.photoUrl?.toString() ?: run {""}
                     val rate = Rate(currentUser.uid,textRate, view.ratingBarFeedback.rating,Date(),imgURL)
-                    Log.w("Dialog",view.ratingBarFeedback.rating.toString())
                     RxBus.publish(NewRateEvent(rate))
                 }
              }
             .setNegativeButton(getString(R.string.dialog_cancel)) { _, _ ->
-                activity!!.toast("Pressed Cancel")
+                activity!!.toast("Comentario Cancelado :(")
             }
 
         return builder.create()
