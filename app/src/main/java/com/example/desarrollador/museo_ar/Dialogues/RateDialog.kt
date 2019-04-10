@@ -30,7 +30,7 @@ class RateDialog : DialogFragment()
         builder.setView(view)
             .setTitle(getString(R.string.dialog_title))
             .setPositiveButton(getString(R.string.dialog_ok)){ _, _ ->
-                activity!!.toast("Pressed Ok")
+                activity!!.toast("Añadiendio Comentario")
                 val textRate = view.findViewById<EditText>(R.id.editTextRateFeedback).text.toString()
                 Log.w("RateAdapter","Textrate: $textRate")
                 if(textRate.isNotEmpty()){
@@ -41,7 +41,7 @@ class RateDialog : DialogFragment()
                 }
              }
             .setNegativeButton(getString(R.string.dialog_cancel)) { _, _ ->
-                activity!!.toast("Pressed Cancel")
+                activity!!.toast("Comentario Cancelado :(")
             }
 
         return builder.create()
