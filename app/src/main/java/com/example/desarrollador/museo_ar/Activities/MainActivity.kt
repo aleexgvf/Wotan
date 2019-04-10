@@ -46,9 +46,9 @@ class MainActivity : AppCompatActivity() {
         firebaseData()
 
 
-        //val app = application as MyApplication
+        val app = application as MyApplication
 
-       /* RequirementsWizardFactory
+        RequirementsWizardFactory
             .createEstimoteRequirementsWizard()
             .fulfillRequirements(this,
                 onRequirementsFulfilled = {
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
                 onError = { throwable ->
                     Log.e("app", "requirements error: " + throwable)
-                }) */
+                })
 
         floatingActionButton.setOnClickListener {
             val intent = Intent(this, UnityPlayerActivity::class.java)

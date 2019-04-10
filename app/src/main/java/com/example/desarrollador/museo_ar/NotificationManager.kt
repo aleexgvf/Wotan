@@ -14,15 +14,14 @@ import com.estimote.proximity_sdk.api.ProximityZoneBuilder
 import com.example.desarrollador.museo_ar.Activities.MainActivity
 import com.example.desarrollador.museo_ar.Activities.MyApplication
 import com.example.desarrollador.museo_ar.Activities.PinturaInfoActivity
+import com.example.desarrollador.museo_ar.Activities.SeccionList
 
 class NotificationsManager(private val context: Context) {
 
 
     private lateinit var pathSecciones: String
-    private lateinit var pathPinturas : String
+    //private lateinit var pathPinturas : String
     private val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-    private val Seccion01 = buildNotification("Hello", "You're near your beacon")
-    private val Seccion02 = buildNotification("Bye bye", "You've left the proximity of your beacon")
 
     private fun buildNotification(title: String, text: String): Notification {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -32,19 +31,25 @@ class NotificationsManager(private val context: Context) {
             )
         }
 
-        val intent = Intent(context, PinturaInfoActivity::class.java)
-        intent.putExtra("pathSecciones",pathSecciones)
-        intent.putExtra("pathPinturas",pathPinturas)
-        val pendingIntent = PendingIntent.getActivity(context,0,intent,PendingIntent.FLAG_UPDATE_CURRENT)
+        if(title == "Seccion 01"){
+            pathSecciones = "Seccion_01"
+        }
+        if(title == "Seccion 02"){
+            pathSecciones = "Seccion_02"
+        }
+            val intent = Intent(context, SeccionList::class.java)
+            intent.putExtra("pathSecciones",pathSecciones)
+            //intent.putExtra("pathPinturas",pathPinturas)
+            val pendingIntent = PendingIntent.getActivity(context,0,intent,PendingIntent.FLAG_UPDATE_CURRENT)
 
+            return NotificationCompat.Builder(context, "content_channel")
+                .setSmallIcon(android.R.drawable.ic_dialog_info)
+                .setContentTitle(title)
+                .setContentText(text)
+                .setContentIntent(pendingIntent)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .build()
 
-        return NotificationCompat.Builder(context, "content_channel")
-            .setSmallIcon(android.R.drawable.ic_dialog_info)
-            .setContentTitle(title)
-            .setContentText(text)
-            .setContentIntent(pendingIntent)
-            .setPriority(NotificationCompat.PRIORITY_HIGH)
-            .build()
     }
 
     fun startMonitoring() {
@@ -60,13 +65,27 @@ class NotificationsManager(private val context: Context) {
             .forTag("jesus-iesoluciones-com-s-n-k1j")
             .inCustomRange(3.0)
             .onEnter {
-                notificationManager.notify(notificationId, Seccion01)
+                notificationManager.notify(notificationId, crearNotificacion("Seccion 01"))
             }
             .onExit {
-                notificationManager.notify(notificationId, Seccion02)
+                notificationManager.notify(notificationId, crearNotificacion("Seccion 02"))
             }
             .build()
         proximityObserver.startObserving(zone)
+    }
+
+    fun crearNotificacion(title: String): Notification{
+
+        if(title == "Seccion 01") {
+            pathSecciones = "Seccion_01"
+        }else if(title == "Seccion 02"){
+            pathSecciones = "Seccion_02"
+        }
+
+        val seccion = buildNotification(title, "Esta en la $title")
+
+        return seccion
+
 
     }
 
