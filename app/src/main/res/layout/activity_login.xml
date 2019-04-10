@@ -43,11 +43,9 @@
                 android:layout_width="match_parent"
                 android:textColor="@color/colorPrimaryText"
                 android:hint="@string/login_password"
-
                 android:paddingLeft="@dimen/login_edit_text_space"
                 android:paddingRight="@dimen/login_edit_text_space"
                 android:layout_height="@dimen/login_edit_text_height"
-
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginStart="16dp"
@@ -62,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:height="@dimen/login_button_xl_height"
-                android:text="Aceptar"
+                android:text="@string/aceptar"
                 android:textColor="@color/colorTextWhite"
                 android:textSize="@dimen/login_text_xl_size"
                 android:textAllCaps="false"
@@ -101,7 +99,8 @@
                 android:layout_width="147dp"
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"
-                android:id="@+id/view" app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/view"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginBottom="20dp"
                 app:layout_constraintBottom_toTopOf="@+id/buttonLogInGoogle"/>
 
@@ -155,7 +154,7 @@
                 app:layout_constraintHorizontal_bias="0.0"/>
 
         <CheckBox
-                android:text="Recúerdame"
+                android:text="@string/remember_me"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBoxLogin"
@@ -166,11 +165,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/editTextPassword"/>
 
         <TextView
-                android:text="ò ingresa con:"
+                android:text="@string/ingresa_con"
                 android:textColor="@color/colorTextBlack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView" android:layout_marginBottom="28dp"
+                android:id="@+id/textView"
+                android:layout_marginBottom="28dp"
                 app:layout_constraintBottom_toTopOf="@+id/buttonLogInFacebook"
                 android:layout_marginStart="11dp"
                 app:layout_constraintStart_toEndOf="@+id/view2"
