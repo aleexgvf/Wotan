@@ -18,10 +18,10 @@
     <string name="aceptar">Aceptar</string>
 
     <!--Strings para los rates-->
-    <string name="dialog_title">Rate the app!!</string>
-    <string name="dialog_edit_text_hint">Leave your Feed</string>
-    <string name="dialog_ok">Rate</string>
-    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_title">¡Califica esta obra!</string>
+    <string name="dialog_edit_text_hint">¡Deja tu comentario!</string>
+    <string name="dialog_ok">Calificar</string>
+    <string name="dialog_cancel">Cancelar</string>
 
     <!--String info Fragment-->
     <string name="info_no_name">Nombre no disponible.</string>
@@ -45,4 +45,7 @@
 
     <!--Strings de Secciones-->
     <string name="seccion">Secciones</string>
+
+    <!--Strings de pinturas-->
+    <string name="pinturas">Pinturas</string>
 </resources>
