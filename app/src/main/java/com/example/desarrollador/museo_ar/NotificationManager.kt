@@ -30,8 +30,9 @@ class NotificationsManager(private val context: Context) {
 
             val intent = Intent(context, SeccionList::class.java)
             intent.putExtra("pathSecciones",pathSecciones)
-            //intent.putExtra("pathPinturas",pathPinturas)
             val pendingIntent = PendingIntent.getActivity(context,0,intent,PendingIntent.FLAG_UPDATE_CURRENT)
+
+
 
             return NotificationCompat.Builder(context, "content_channel")
                 .setSmallIcon(android.R.drawable.ic_dialog_info)
@@ -40,7 +41,6 @@ class NotificationsManager(private val context: Context) {
                 .setContentIntent(pendingIntent)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .build()
-
     }
 
     fun startMonitoring() {
@@ -56,10 +56,14 @@ class NotificationsManager(private val context: Context) {
             .forTag("jesus-iesoluciones-com-s-n-k1j")
             .inCustomRange(3.0)
             .onEnter {
-                notificationManager.notify(notificationId, crearNotificacion("Seccion 01"))
+                if(notificationManager.activeNotifications.isEmpty()){
+                    notificationManager.notify(notificationId, crearNotificacion("Seccion 01"))
+                }
             }
             .onExit {
-                notificationManager.notify(notificationId, crearNotificacion("Seccion 02"))
+                if(notificationManager.activeNotifications.isEmpty()){
+                    notificationManager.notify(notificationId, crearNotificacion("Seccion 02"))
+                }
             }
             .build()
         proximityObserver.startObserving(zone)
@@ -74,6 +78,7 @@ class NotificationsManager(private val context: Context) {
             pathSecciones = "Seccion_02"
         }
         val seccion = buildNotification(title, "Esta en la $title")
+
         return seccion
     }
 

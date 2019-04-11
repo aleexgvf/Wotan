@@ -100,7 +100,7 @@ class RatesFragment : Fragment() {
                         activity!!.toast("Exception!")
                         return
                     }
-                   snapshot?.let {
+                       snapshot?.let {
                        ratesList.clear()
                        val rates = it.toObjects(Rate::class.java)
                        ratesList.addAll(rates)

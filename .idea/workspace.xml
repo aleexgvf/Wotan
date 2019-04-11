@@ -13,7 +13,27 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="b9ea3d05-a8ad-4142-a493-bfe36516d2f8" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="b9ea3d05-a8ad-4142-a493-bfe36516d2f8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Fragments/RatesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Fragments/RatesFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Login/ForgotPassword_activity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Login/ForgotPassword_activity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/NotificationManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/NotificationManager.kt" afterDir="false" />
+    </list>
+>>>>>>> ForgotPass
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,43 +58,44 @@
         <counts>
           <entry key="project.closed" value="20" />
           <entry key="project.open.time.1" value="13" />
+          <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="gradle" value="8" />
+          <entry key="gradle" value="9" />
           <entry key="java" value="2" />
-          <entry key="kt" value="73" />
+          <entry key="kt" value="76" />
           <entry key="xml" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Groovy" value="8" />
+          <entry key="Groovy" value="9" />
           <entry key="JAVA" value="2" />
-          <entry key="Kotlin" value="73" />
+          <entry key="Kotlin" value="76" />
           <entry key="XML" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="10" />
-          <entry key="gradle" value="4" />
-          <entry key="kt" value="2088" />
+          <entry key="gradle" value="5" />
+          <entry key="kt" value="2146" />
           <entry key="txt" value="2" />
           <entry key="xml" value="162" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="4" />
-          <entry key="Kotlin" value="2088" />
+          <entry key="Groovy" value="5" />
+          <entry key="Kotlin" value="2146" />
           <entry key="PLAIN_TEXT" value="12" />
           <entry key="XML" value="162" />
         </counts>
@@ -87,7 +108,11 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Login/ForgotPassword_activity.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
+<<<<<<< HEAD
               <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+=======
+              <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+>>>>>>> ForgotPass
             </state>
           </provider>
         </entry>
@@ -95,8 +120,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Fragments/RatesFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="437">
               <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+=======
+            <state relative-caret-position="379">
+              <caret line="102" column="23" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
+>>>>>>> ForgotPass
             </state>
           </provider>
         </entry>
@@ -3573,7 +3603,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/activities/MainActivity.kt" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/activities/SplashActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/activities/MainEmpyActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/adapters/RatesAdapter.kt" />
@@ -3583,8 +3612,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_seccion_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_pintura_info.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_pintura_info.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Fragments/RatesFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Login/ForgotPassword_activity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Login/SignUpActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Models/Rate.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Activities/SeccionList.kt" />
@@ -3593,8 +3620,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Activities/MainEmpyActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Activities/PinturaInfoActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Activities/MainActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/NotificationManager.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Activities/MyApplication.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Login/ForgotPassword_activity.kt" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/NotificationManager.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Fragments/RatesFragment.kt" />
       </list>
     </option>
   </component>
@@ -3666,7 +3696,7 @@
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="device.picker.selection" value="Nexus_5X_API_27" />
+    <property name="device.picker.selection" value="HAVBB18306152260" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.XML" />
@@ -3819,7 +3849,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.1350278" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1350278" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -3837,7 +3867,7 @@
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Android Profiler" order="9" sideWeight="0.49960285" weight="0.32882884" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.32931727" />
-      <window_info anchor="bottom" id="Build" order="11" sideWeight="0.76215506" weight="0.2891892" />
+      <window_info anchor="bottom" id="Build" order="11" sideWeight="0.76215506" visible="true" weight="0.28915662" />
       <window_info anchor="bottom" id="Find" order="12" sideWeight="0.49934298" weight="0.32910156" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
@@ -3896,6 +3926,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="122">
@@ -3903,6 +3934,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> ForgotPass
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Utils/CircleTransform.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -3987,6 +4020,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Login/ForgotPassword_activity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -4001,6 +4035,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> ForgotPass
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Models/Rate.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -4029,16 +4065,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Adapters/RatesAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="17" column="84" selection-start-line="17" selection-start-column="84" selection-end-line="17" selection-end-column="84" />
-          <folding>
-            <element signature="e#53#511#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Activities/MainEmpyActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -4046,10 +4072,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Activities/MyApplication.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Activities/PinturaInfoActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
-          <caret line="75" column="62" selection-start-line="75" selection-start-column="62" selection-end-line="75" selection-end-column="62" />
+        <state>
+          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -4057,6 +4090,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
           <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+<<<<<<< HEAD
+=======
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Adapters/RatesAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="17" column="84" selection-start-line="17" selection-start-column="84" selection-end-line="17" selection-end-column="84" />
+          <folding>
+            <element signature="e#53#511#0" expanded="true" />
+          </folding>
+>>>>>>> ForgotPass
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -4067,10 +4120,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Activities/MyApplication.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Login/ForgotPassword_activity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="378">
+          <caret line="36" column="53" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/desarrollador/museo_ar/Fragments/RatesFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="102" column="23" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
         </state>
       </provider>
     </entry>
