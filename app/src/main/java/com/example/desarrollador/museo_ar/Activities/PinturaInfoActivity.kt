@@ -75,12 +75,12 @@ class PinturaInfoActivity : AppCompatActivity() {
             .addValueEventListener(object : ValueEventListener{
                 override fun onCancelled(p0: DatabaseError) {}
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    val pinturas : Pinturas = dataSnapshot.getValue(Pinturas::class.java)!!
-                    Picasso.get().load(pinturas!!.Imagen).into(imageViewPintura)
-                    textViewDesc.text = Html.fromHtml("<div style='text-align: justify;'>${pinturas.Desc}</div>")
-                    textViewNombre.text = pinturas.Name
-                    ratingBar.rating = pinturas.Rating
-                    toolvarView.title = pinturas.Name
+                    val PINTURAS : Pinturas = dataSnapshot.getValue(Pinturas::class.java)!!
+                    Picasso.get().load(PINTURAS!!.Imagen).into(imageViewPintura)
+                    textViewDesc.text = Html.fromHtml("<div style='text-align: justify;'>${PINTURAS.Desc}</div>")
+                    textViewNombre.text = PINTURAS.Name
+                    ratingBar.rating = PINTURAS.Rating
+                    toolvarView.title = PINTURAS.Name
                 }
             })
     }

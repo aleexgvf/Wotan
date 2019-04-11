@@ -65,7 +65,7 @@ class NotificationsManager(private val context: Context) {
         proximityObserver.startObserving(zone)
     }
 
-    fun crearNotificacion(title: String): Notification{
+    private fun crearNotificacion(title: String): Notification{
 
         if(title == "Seccion 01") {
             pathSecciones = "Seccion_01"

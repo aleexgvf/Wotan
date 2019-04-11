@@ -11,12 +11,12 @@ import com.google.firebase.auth.FirebaseAuth
 class MainEmpyActivity : AppCompatActivity() {
 
 
-    private val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+    private val M_AUTH: FirebaseAuth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        if(mAuth.currentUser == null){
+        if(M_AUTH.currentUser == null){
             goToActivity<LoginActivity>(){
                 flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             }
