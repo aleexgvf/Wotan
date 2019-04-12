@@ -40,18 +40,18 @@
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".Login.LoginActivity"
+                android:name=".login.LoginActivity"
                 android:theme="@style/NoPreview"
                 android:windowSoftInputMode="adjustPan"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".Login.ForgotPassword_activity"
+                android:name=".login.ForgotPassword_activity"
                 android:windowSoftInputMode="adjustPan"
                 android:screenOrientation="portrait">
         </activity>
         <activity
-                android:name=".Login.SignUpActivity"
+                android:name=".login.SignUpActivity"
                 android:windowSoftInputMode="adjustPan"
                 android:screenOrientation="portrait">
         </activity>

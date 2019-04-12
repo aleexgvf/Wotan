@@ -3,8 +3,8 @@ package com.example.desarrollador.museo_ar.Activities
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.example.desarrollador.museo_ar.Extension.goToActivity
-import com.example.desarrollador.museo_ar.Login.LoginActivity
+import com.example.desarrollador.museo_ar.extension.goToActivity
+import com.example.desarrollador.museo_ar.login.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 
 //login y mainactivity flow

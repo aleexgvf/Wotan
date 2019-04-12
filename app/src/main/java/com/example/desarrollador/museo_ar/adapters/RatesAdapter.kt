@@ -3,10 +3,10 @@ package com.example.desarrollador.museo_ar.Adapters
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
-import com.example.desarrollador.museo_ar.Extension.inflate
-import com.example.desarrollador.museo_ar.Models.Rate
+import com.example.desarrollador.museo_ar.extension.inflate
+import com.example.desarrollador.museo_ar.models.Rate
 import com.example.desarrollador.museo_ar.R
-import com.example.desarrollador.museo_ar.Utils.CircleTransform
+import com.example.desarrollador.museo_ar.utils.CircleTransform
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_rates_items.view.*
 import java.text.SimpleDateFormat

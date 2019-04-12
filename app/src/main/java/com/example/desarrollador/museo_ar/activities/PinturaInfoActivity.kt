@@ -6,14 +6,9 @@ import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.text.Html
 import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
 import android.widget.*
-import com.example.desarrollador.museo_ar.Extension.goToActivity
-import com.example.desarrollador.museo_ar.Login.LoginActivity
-import com.example.desarrollador.museo_ar.Models.Pinturas
 import com.example.desarrollador.museo_ar.R
-import com.google.firebase.auth.FirebaseAuth
+import com.example.desarrollador.museo_ar.models.Pintura
 import com.google.firebase.database.*
 import com.iesoluciones.WotanAR.UnityPlayerActivity
 import com.squareup.picasso.Picasso
@@ -69,12 +64,12 @@ class PinturaInfoActivity : AppCompatActivity() {
             .addValueEventListener(object : ValueEventListener{
                 override fun onCancelled(p0: DatabaseError) {}
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    val pinturas : Pinturas = dataSnapshot.getValue(Pinturas::class.java)!!
-                    Picasso.get().load(pinturas!!.Imagen).into(imageViewPintura)
-                    textViewDesc.text = Html.fromHtml("<div style='text-align: justify;'>${pinturas.Desc}</div>")
-                    textViewNombre.text = pinturas.Name
-                    ratingBar.rating = pinturas.Rating
-                    toolvarView.title = pinturas.Name
+                    val pinturas : Pintura = dataSnapshot.getValue(Pintura::class.java)!!
+                    Picasso.get().load(pinturas!!.imagen).into(imageViewPintura)
+                    textViewDesc.text = Html.fromHtml("<div style='text-align: justify;'>${pinturas.desc}</div>")
+                    textViewNombre.text = pinturas.name
+                    ratingBar.rating = pinturas.rating
+                    toolvarView.title = pinturas.name
                 }
             })
     }

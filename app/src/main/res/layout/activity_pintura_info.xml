@@ -4,7 +4,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:background="#000"
+        android:background="@color/colorTextBlack"
         tools:ignore="ExtraText"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -15,8 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorWotan3"
-            android:title="Pinturas"
-            android:titleTextColor="#FFFFFF"
+            android:title="@string/pinturas"
+            android:titleTextColor="@color/colorTextWhite"
             android:titleMarginStart="50dp"/>
 
     <ImageView
@@ -35,7 +35,7 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#000"
+                android:background="@color/colorTextBlack"
                 app:layout_constraintTop_toTopOf="parent"
                 android:id="@+id/scrollView2"
                 android:layout_marginTop="60dp"
@@ -58,7 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/colorTextBlack"
-                tools:context=".Fragments.PinturaInfo">
+                tools:context=".fragments.PinturaInfo">
 
                 <ImageView
                         android:layout_width="294dp"
@@ -73,7 +73,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toTopOf="@+id/textViewNombre"/>
                     <TextView
-                            android:text="Nombre de la pintura"
+                            android:text="@string/placeholder_title"
                             android:textColor="@color/colorTextWhite"
                             android:textSize="16dp"
                             android:layout_width="wrap_content"
@@ -106,7 +106,7 @@
                         android:layout_marginStart="32dp"
                         android:layout_marginEnd="96dp"/>
                 <TextView
-                        android:text="Descripcion"
+                        android:text="@string/placeholder_desc"
                         android:textSize="16dp"
                         android:textColor="@color/colorTextWhite"
                         android:layout_width="wrap_content"
@@ -151,7 +151,7 @@
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:id="@+id/fragment_rates"
-                    class="com.example.desarrollador.museo_ar.Fragments.RatesFragment"/>
+                    class="com.example.desarrollador.museo_ar.fragments.RatesFragment"/>
         </LinearLayout>
 
 

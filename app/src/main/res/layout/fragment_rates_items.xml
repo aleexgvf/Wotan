@@ -54,7 +54,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"/>
 
                 <TextView
-                        android:text="13 dIC 2018"
+                        android:text="@string/placeholder_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/textViewCalendar"
@@ -76,7 +76,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"/>
 
                 <TextView
-                        android:text="4.5"
+                        android:text="@string/placeholder_rate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/textViewStar"

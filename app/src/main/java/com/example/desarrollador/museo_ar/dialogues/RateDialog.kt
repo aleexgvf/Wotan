@@ -5,13 +5,13 @@ import android.os.Bundle
 import android.support.v4.app.DialogFragment
 import android.support.v7.app.AlertDialog
 import android.widget.EditText
-import com.example.desarrollador.museo_ar.Extension.toast
-import com.example.desarrollador.museo_ar.Models.NewRateEvent
-import com.example.desarrollador.museo_ar.Models.Rate
+import com.example.desarrollador.museo_ar.extension.toast
+import com.example.desarrollador.museo_ar.models.NewRateEvent
+import com.example.desarrollador.museo_ar.models.Rate
 import com.example.desarrollador.museo_ar.R
 import com.google.firebase.auth.FirebaseAuth
 import java.util.*
-import com.example.desarrollador.museo_ar.Utils.RxBus
+import com.example.desarrollador.museo_ar.utils.RxBus
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.dialog_rate.view.*
 

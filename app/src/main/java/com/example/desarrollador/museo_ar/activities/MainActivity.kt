@@ -10,9 +10,9 @@ import com.example.desarrollador.museo_ar.R
 import android.view.*
 import android.widget.*
 import com.estimote.mustard.rx_goodness.rx_requirements_wizard.RequirementsWizardFactory
-import com.example.desarrollador.museo_ar.Extension.goToActivity
-import com.example.desarrollador.museo_ar.Login.LoginActivity
-import com.example.desarrollador.museo_ar.Models.Secciones
+import com.example.desarrollador.museo_ar.extension.goToActivity
+import com.example.desarrollador.museo_ar.login.LoginActivity
+import com.example.desarrollador.museo_ar.models.Seccion
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -72,16 +72,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun firebaseData() {
-        val option = FirebaseRecyclerOptions.Builder<Secciones>()
-            .setQuery(ref, Secciones::class.java)
+        val option = FirebaseRecyclerOptions.Builder<Seccion>()
+            .setQuery(ref, Seccion::class.java)
             .setLifecycleOwner(this)
             .build()
-        val firebaseRecyclerAdapter = object: FirebaseRecyclerAdapter<Secciones, MyViewHolder>(option){
+        val firebaseRecyclerAdapter = object: FirebaseRecyclerAdapter<Seccion, MyViewHolder>(option){
             override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
                 val itemView = LayoutInflater.from(this@MainActivity).inflate(R.layout.list_layout,parent,false)
                 return MyViewHolder(itemView)
             }
-            override fun onBindViewHolder(holder: MyViewHolder, position: Int, model: Secciones) {
+            override fun onBindViewHolder(holder: MyViewHolder, position: Int, model: Seccion) {
                 val placeId = getRef(position).key.toString()
                 ref.child(placeId).addValueEventListener(object: ValueEventListener {
                     override fun onCancelled(p0: DatabaseError) {
@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     override fun onDataChange(p0: DataSnapshot) {
                         showProgress.visibility = if(itemCount == 0) View.VISIBLE else View.GONE
-                        holder.txtName.setText(model.Name)
+                        holder.txtName.setText(model.name)
                         holder.itemView.setOnClickListener{
                             val intent = Intent(holder.itemView.context,SeccionList::class.java)
                             intent.putExtra("pathSecciones",placeId)
