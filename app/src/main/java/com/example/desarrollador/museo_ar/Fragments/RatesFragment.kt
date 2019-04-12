@@ -8,7 +8,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.desarrollador.museo_ar.Dialogues.RateDialog
+import com.example.desarrollador.museo_ar.dialogues.RateDialog
 import com.example.desarrollador.museo_ar.Extension.toast
 import com.example.desarrollador.museo_ar.Models.NewRateEvent
 import com.example.desarrollador.museo_ar.Models.Rate
@@ -65,9 +65,11 @@ class RatesFragment : Fragment() {
         _view.recyclerView.layoutManager = layoutManager
         _view.recyclerView.itemAnimator = DefaultItemAnimator()
         _view.recyclerView.adapter = adapter
+        Log.w("CODIGO IE","ENTRA 1")
     }
 
     private fun setUpFav() {
+        Log.w("CODIGO IE","ENTRA 2")
         _view.favRating.setOnClickListener { RateDialog().show(fragmentManager, "") }
     }
 

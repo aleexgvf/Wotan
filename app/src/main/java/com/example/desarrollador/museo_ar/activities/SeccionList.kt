@@ -21,9 +21,9 @@ import com.iesoluciones.WotanAR.UnityPlayerActivity
 
 class SeccionList : AppCompatActivity() {
 
-    private lateinit var mrecylerview : RecyclerView
+    private lateinit var mRecylerView : RecyclerView
     private lateinit var ref: DatabaseReference
-    private lateinit var show_progress: ProgressBar
+    private lateinit var showProgress: ProgressBar
     private lateinit var pathSecciones: String
     private lateinit var floatingActionButton: FloatingActionButton
     private lateinit var imageViewFlechaAtras: ImageView
@@ -34,9 +34,9 @@ class SeccionList : AppCompatActivity() {
 
         pathSecciones= intent.getStringExtra("pathSecciones")
         ref = FirebaseDatabase.getInstance().reference.child("Seccion").child(pathSecciones).child("Pinturas")
-        mrecylerview = findViewById(R.id.reyclerview)
-        mrecylerview.layoutManager = LinearLayoutManager(this)
-        show_progress = findViewById(R.id.progress_bar)
+        mRecylerView = findViewById(R.id.reyclerview)
+        mRecylerView.layoutManager = LinearLayoutManager(this)
+        showProgress = findViewById(R.id.progress_bar)
         imageViewFlechaAtras = findViewById(R.id.imageViewFlechaAtrasSecciones)
         floatingActionButton = findViewById(R.id.floatingActionButton)
         firebaseData()
@@ -75,7 +75,7 @@ class SeccionList : AppCompatActivity() {
                     }
                     override fun onDataChange(p0: DataSnapshot) {
 
-                        show_progress.visibility = if(itemCount == 0) View.VISIBLE else View.GONE
+                        showProgress.visibility = if(itemCount == 0) View.VISIBLE else View.GONE
                         holder.txt_name.text = model.Name
                         holder.itemView.setOnClickListener{
                             val intent = Intent(holder.itemView.context,PinturaInfoActivity::class.java)
@@ -88,7 +88,7 @@ class SeccionList : AppCompatActivity() {
                 })
             }
         }
-        mrecylerview.adapter = firebaseRecyclerAdapter
+        mRecylerView.adapter = firebaseRecyclerAdapter
         firebaseRecyclerAdapter.startListening()
     }
     private class MyViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {

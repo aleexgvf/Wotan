@@ -1,4 +1,4 @@
-package com.example.desarrollador.museo_ar.Dialogues
+package com.example.desarrollador.museo_ar.dialogues
 
 import android.app.Dialog
 import android.os.Bundle
@@ -40,9 +40,7 @@ class RateDialog : DialogFragment()
             .setNegativeButton(getString(R.string.dialog_cancel)) { _, _ ->
                 activity!!.toast("Comentario Cancelado :(")
             }
-
         return builder.create()
-
     }
 
     private fun setUpCurrentUser(){

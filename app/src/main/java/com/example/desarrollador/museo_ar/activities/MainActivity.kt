@@ -23,7 +23,7 @@ var ref: DatabaseReference = FirebaseDatabase.getInstance().getReference().child
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mrecyclerview : RecyclerView
+    private lateinit var mRecyclerView : RecyclerView
     private lateinit var showProgress: ProgressBar
     private lateinit var imageViewFlechaAtras: ImageView
     private lateinit var floatingButtonMainAR: ImageView
@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mrecyclerview = findViewById(R.id.reyclerview)
-        mrecyclerview.layoutManager = LinearLayoutManager(this)
+        mRecyclerView = findViewById(R.id.reyclerview)
+        mRecyclerView.layoutManager = LinearLayoutManager(this)
         showProgress = findViewById(R.id.progress_bar)
         imageViewFlechaAtras = findViewById(R.id.imageViewFlechaAtras)
         floatingButtonMainAR = findViewById(R.id.floatingButtonMainAR)
@@ -57,8 +57,8 @@ class MainActivity : AppCompatActivity() {
                 })
 
         floatingButtonMainAR.setOnClickListener {
-            val INTENT = Intent(this, UnityPlayerActivity::class.java)
-            startActivity(INTENT)
+            val intent = Intent(this, UnityPlayerActivity::class.java)
+            startActivity(intent)
         }
 
         imageViewFlechaAtras.setOnClickListener {
@@ -72,18 +72,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun firebaseData() {
-        val OPTION = FirebaseRecyclerOptions.Builder<Secciones>()
+        val option = FirebaseRecyclerOptions.Builder<Secciones>()
             .setQuery(ref, Secciones::class.java)
             .setLifecycleOwner(this)
             .build()
-        val firebaseRecyclerAdapter = object: FirebaseRecyclerAdapter<Secciones, MyViewHolder>(OPTION){
+        val firebaseRecyclerAdapter = object: FirebaseRecyclerAdapter<Secciones, MyViewHolder>(option){
             override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-                val ITEM_VIEW = LayoutInflater.from(this@MainActivity).inflate(R.layout.list_layout,parent,false)
-                return MyViewHolder(ITEM_VIEW)
+                val itemView = LayoutInflater.from(this@MainActivity).inflate(R.layout.list_layout,parent,false)
+                return MyViewHolder(itemView)
             }
             override fun onBindViewHolder(holder: MyViewHolder, position: Int, model: Secciones) {
-                val PLACE_ID = getRef(position).key.toString()
-                ref.child(PLACE_ID).addValueEventListener(object: ValueEventListener {
+                val placeId = getRef(position).key.toString()
+                ref.child(placeId).addValueEventListener(object: ValueEventListener {
                     override fun onCancelled(p0: DatabaseError) {
                         Toast.makeText(this@MainActivity, "Error Occurred "+ p0.toException(), Toast.LENGTH_SHORT).show()
                     }
@@ -91,9 +91,9 @@ class MainActivity : AppCompatActivity() {
                         showProgress.visibility = if(itemCount == 0) View.VISIBLE else View.GONE
                         holder.txtName.setText(model.Name)
                         holder.itemView.setOnClickListener{
-                            val INTENT = Intent(holder.itemView.context,SeccionList::class.java)
-                            INTENT.putExtra("pathSecciones",PLACE_ID)
-                            holder.itemView.context.startActivity(INTENT)
+                            val intent = Intent(holder.itemView.context,SeccionList::class.java)
+                            intent.putExtra("pathSecciones",placeId)
+                            holder.itemView.context.startActivity(intent)
                         }
                     }
                 })
@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-        mrecyclerview.adapter = firebaseRecyclerAdapter
+        mRecyclerView.adapter = firebaseRecyclerAdapter
         firebaseRecyclerAdapter.startListening()
     }
     private class MyViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
