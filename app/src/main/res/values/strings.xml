@@ -28,7 +28,8 @@
 
     <!--Strings para facebook-->
     <string name="facebook_app_id">318227448829090</string>
-    <string name="fb_login_protocol_scheme">fb318227448829090</string>
+    <string name="fb_login_protocol_scheme">fb288484078754443</string>
+
 
     <!--Strings de Sign out-->
     <string name="options_sign_out">Sign out</string>

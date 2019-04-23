@@ -7,10 +7,6 @@ import android.widget.EditText
 import com.example.desarrollador.museo_ar.Activities.MainActivity
 import com.example.desarrollador.museo_ar.extension.*
 import com.example.desarrollador.museo_ar.R
-import com.facebook.AccessToken
-import com.facebook.CallbackManager
-import com.facebook.FacebookCallback
-import com.facebook.FacebookException
 import com.facebook.login.LoginResult
 import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -21,6 +17,9 @@ import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import kotlinx.android.synthetic.main.activity_login.*
+import com.facebook.*
+import com.facebook.appevents.AppEventsLogger
+import com.facebook.FacebookSdk
 
 
 
@@ -36,7 +35,9 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
+        //printHasKey()
         if(mAuth.currentUser == null){
             toast("Nope")
         }else{
@@ -72,10 +73,9 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
         buttonLogInFacebook.setReadPermissions("email")
         buttonLogInFacebook.setOnClickListener{
             loginByFacebookAccountIntoFirebase()
+
         }
-
         validarEmailyPassword(editTextEmail, editTextPassword)
-
     }
 
 
@@ -83,9 +83,10 @@ class LoginActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedLis
    private fun loginByFacebookAccountIntoFirebase(){
        buttonLogInFacebook.registerCallback(callbackManager, object : FacebookCallback<LoginResult>{
            override fun onSuccess(result: LoginResult?) {
-                handleFacebookAccessToken(result!!.accessToken)
+               handleFacebookAccessToken(result!!.accessToken)
                goToActivity<MainActivity>()
                overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right)
+               finish()
            }
 
            override fun onCancel() {

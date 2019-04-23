@@ -8,6 +8,7 @@ import android.text.Html
 import android.util.Log
 import android.widget.*
 import com.example.desarrollador.museo_ar.R
+import com.example.desarrollador.museo_ar.extension.toast
 import com.example.desarrollador.museo_ar.models.Pintura
 import com.google.firebase.database.*
 import com.iesoluciones.WotanAR.UnityPlayerActivity
@@ -35,8 +36,8 @@ class PinturaInfoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_pintura_info)
         pathSecciones = intent.getStringExtra("pathSecciones")
         pathPinturas = intent.getStringExtra("pathPinturas")
-        ref = FirebaseDatabase.getInstance().getReference().child("Seccion").child(pathSecciones).child("Pinturas").child(pathPinturas)
-        Log.w("url",ref.toString())
+        ref = FirebaseDatabase.getInstance().reference.child("Seccion").child(pathSecciones).child("Pinturas").child(pathPinturas)
+        toast(ref.toString())
         imageViewPintura = findViewById(R.id.imageViewPintura)
         textViewNombre = findViewById(R.id.textViewNombre)
         ratingBar = findViewById(R.id.ratingBar)

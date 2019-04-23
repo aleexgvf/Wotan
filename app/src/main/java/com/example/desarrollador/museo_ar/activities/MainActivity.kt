@@ -1,16 +1,19 @@
 package com.example.desarrollador.museo_ar.Activities
 
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Base64
 import android.util.Log
 import com.example.desarrollador.museo_ar.R
 import android.view.*
 import android.widget.*
 import com.estimote.mustard.rx_goodness.rx_requirements_wizard.RequirementsWizardFactory
 import com.example.desarrollador.museo_ar.extension.goToActivity
+import com.example.desarrollador.museo_ar.extension.toast
 import com.example.desarrollador.museo_ar.login.LoginActivity
 import com.example.desarrollador.museo_ar.models.Seccion
 import com.firebase.ui.database.FirebaseRecyclerAdapter
@@ -18,8 +21,10 @@ import com.firebase.ui.database.FirebaseRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.iesoluciones.WotanAR.UnityPlayerActivity
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
 
-var ref: DatabaseReference = FirebaseDatabase.getInstance().getReference().child("Seccion")
+var ref: DatabaseReference = FirebaseDatabase.getInstance().reference.child("Seccion")
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         mRecyclerView = findViewById(R.id.reyclerview)
         mRecyclerView.layoutManager = LinearLayoutManager(this)
         showProgress = findViewById(R.id.progress_bar)
@@ -39,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         floatingButtonMainAR = findViewById(R.id.floatingButtonMainAR)
         firebaseData()
 
-        val app = application as MyApplication
+        /*val app = application as MyApplication
 
         RequirementsWizardFactory
             .createEstimoteRequirementsWizard()
@@ -54,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
                 onError = { throwable ->
                     Log.e("app", "requirements error: " + throwable)
-                })
+                })*/
 
         floatingButtonMainAR.setOnClickListener {
             val intent = Intent(this, UnityPlayerActivity::class.java)
@@ -70,6 +76,8 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+
 
     fun firebaseData() {
         val option = FirebaseRecyclerOptions.Builder<Seccion>()
@@ -106,7 +114,7 @@ class MainActivity : AppCompatActivity() {
     }
     private class MyViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
 
-        internal var txtName: TextView = itemView!!.findViewById<TextView>(R.id.Display_title)
+        internal var txtName: TextView = itemView!!.findViewById(R.id.Display_title)
 
     }
 }

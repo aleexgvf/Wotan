@@ -72,7 +72,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="16dp"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="16dp"/>
+                android:layout_marginStart="16dp" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView" app:layout_constraintVertical_bias="0.0"/>
 
         <TextView
                 android:layout_width="wrap_content"
@@ -87,13 +88,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/editTextPassword"/>
 
         <View
-                android:layout_width="155dp"
+                android:layout_width="137dp"
                 android:layout_height="1dp"
                 android:background="@android:color/darker_gray"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginBottom="36dp"
                 app:layout_constraintBottom_toTopOf="@+id/buttonLogInFacebook"
-                android:id="@+id/view2"/>
+                android:id="@+id/view2" app:layout_constraintEnd_toStartOf="@+id/textView"
+                android:layout_marginEnd="8dp"/>
 
         <View
                 android:layout_width="147dp"
@@ -102,7 +104,8 @@
                 android:id="@+id/view"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginBottom="20dp"
-                app:layout_constraintBottom_toTopOf="@+id/buttonLogInGoogle"/>
+                app:layout_constraintBottom_toTopOf="@+id/buttonLogInGoogle"
+                app:layout_constraintStart_toEndOf="@+id/textView" android:layout_marginStart="8dp"/>
 
         <com.google.android.gms.common.SignInButton
                 android:id="@+id/buttonLogInGoogle"
@@ -172,10 +175,8 @@
                 android:id="@+id/textView"
                 android:layout_marginBottom="28dp"
                 app:layout_constraintBottom_toTopOf="@+id/buttonLogInFacebook"
-                android:layout_marginStart="11dp"
                 app:layout_constraintStart_toEndOf="@+id/view2"
-                app:layout_constraintEnd_toStartOf="@+id/view"
-                android:layout_marginEnd="11dp"/>
+                app:layout_constraintEnd_toStartOf="@+id/view"/>
 
 
     </android.support.constraint.ConstraintLayout>
